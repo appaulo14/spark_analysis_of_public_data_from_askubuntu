@@ -1,6 +1,6 @@
 # Finding the Most Common Topics on askubuntu.com
 ## Abstract
-~~The abstract is used by readers to quickly review the overall content of the paper.  Journals typically place strict word limits on abstracts, such as 200 words, making them a challenge to write.  The abstract should provide a complete synopsis of the research paper and should introduce the topic and the specific research question, provide a statement regarding methodology and should provide a general statement about the results and the findings.  Because it is really a summary of the entire research paper, it is often written last.
+~~The abstract is used by readers to quickly review the overall content of the paper.  Journals typically place strict word limits on abstracts, such as 200 words, making them a challenge to write.  The abstract should provide a complete synopsis of the research paper and should introduce the topic and the specific research question, provide a statement regarding methodology and should provide a general statement about the results and the findings.  Because it is really a summary of the entire research paper, it is often written last.~~
 
 Analyzed public data on askubuntu and found most common topics to identify what areas Ubuntu developers might benefit from focusing on. Tags were the most useful. Word counting the body text was less useful. Word counting the titles was TBD. 
 
