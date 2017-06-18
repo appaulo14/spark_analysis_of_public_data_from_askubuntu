@@ -10,7 +10,7 @@ This article focuses on analyzing the questions on askubuntu.com to find the mos
 I'm in no way affiliated with Ubuntu itself. This analysis is for demonstration purposes only. 
 
 ## Methods
-The data was obtained from the [Stack Exchange Data Dump on archive.org](https://archive.org/details/stackexchange), after which it was extracted out of its 7z achived and the XML files were uploaded to HDFS storage on Microsoft Azure.
+The data was obtained from the [Stack Exchange Data Dump on archive.org](https://archive.org/details/stackexchange), after which it was extracted out of its 7z achive and the XML files inside were uploaded to HDFS storage on Microsoft Azure.
 
 After the files were uploaded to Azure, two Spark 2.0 scripts were written and executed in Python (find_top_tags_for_askubuntu.com.py and find_top_words_for_askubunut.com.py) in an HD Insights cluster following this [Azure HD Insights/Spark guide](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-apache-spark-jupyter-spark-sql). 
 
@@ -18,7 +18,9 @@ These scripts can be run from a Spark 2.0 cluster using the following commands:
 ```spark-submit find_top_tags_for_askubuntu.com.py```   
 ```spark-submit find_top_words_for_askubuntu.com.py```    
 
-The results from these scripts are saved in the results section of this repository. For find_top_words_for_askubuntu.com.py, only the top 1,000 results are saved due to size limitations. 
+The scripts are saved in the scripts section of this repository. 
+
+The results from these scripts are saved in the results section of this repository. For find_top_words_for_askubuntu.com.py, only the top 1,000 results were saved due to size limitations. 
 
 ## Results
 ### Table 1: Top 25 Tags
@@ -53,7 +55,9 @@ The results from these scripts are saved in the results section of this reposito
 </tbody>
 </table>
 
-### Table 2: Top 25 Words in Title of Questions 
+### Table 2: Top 25 Words in Title of Questions*
+*Filtered out generic words such as prepositions and conjunctions    
+
 |Rank|Word       |Count|
 |--- | ---       | --- |
 |1   |ubuntu     |71478|
@@ -83,8 +87,8 @@ The results from these scripts are saved in the results section of this reposito
 |25  |upgrade	  |4898|
 
 
-### Table 3: Top 25 Words in Body of Question
-*Filtering out generic words such as prepositions and conjunctions
+### Table 3: Top 25 Words in Body of Question*
+*Filtered out generic words such as prepositions and conjunctions
 <table>
 <thead><tr><td><b>Rank</b></td><td><b>word</b></td><td><b>count</b></td></tr></thead>
 <tbody>
@@ -117,11 +121,11 @@ The results from these scripts are saved in the results section of this reposito
 </table>
 
 ## Discussion/Conclusion
-Tags were the most useful. The most common questions seemed to be about Ubuntu LTS releases (12.04, 14.04, 16.04), with all three recent LTS releases being in the top 6 tags. A lot of questions are related to booting (boot: 3rd place, dual-boot: 7th place, grub2: 13th place). This might be due to the wide variety of hardware Ubuntu but can't say for sure. Networking-related questions were common (networking: 5th place, wireless: 10th place). Many people seem to be interested in running Ubuntu as a server, judging by the server tag coming in at 11th place. Other notably high tags were related to drivers, graphics, installation, patitioning, and sound, again possibly due to the wide variety of hardware on which Ubuntu can run (drivers: 8th place, nvdia: 16th place, installation: 15th place, parititioning: 14th place, sound: 25th place). 
+Tags were the most useful. The most common questions seemed to be about Ubuntu LTS releases (12.04, 14.04, 16.04), with all three recent LTS releases being in the top 6 tags. This may be due to LTS releases being used the most. A lot of questions are related to booting (boot: 3rd place, dual-boot: 7th place, grub2: 13th place). This might be due to the wide variety of hardware Ubuntu runs on but I cannot say for sure. Networking-related questions were common (networking: 5th place, wireless: 10th place). Additionally, many people seem to be interested in running Ubuntu as a server, judging by the server tag coming in at 11th place. Other notably high tags were related to drivers , graphics, installation, patitioning, and sound, again possibly due to the wide variety of hardware on which Ubuntu can run (drivers: 8th place, nvdia: 16th place, installation: 15th place, parititioning: 14th place, sound: 25th place). 
 
 Word counting did not provide much useful information compared to tag counting. A lot of the words were pronouns, prepositions, conjunctions, or other words that do not provide any meaningful information. I tried to filter such words out but it was difficult due to the large number of such words. 
 
-The information collected here may be useful what common problems Ubuntu users face and also what features they are most interested in.
+The information collected here may be useful for what common problems Ubuntu users face and also what features they are most interested in. However, more investigation is needed before it can be turned into actionable insights. 
 
 Future research might try using a natural language parsing library such as [NLTK](http://www.nltk.org/) to better identify topics asked about and also better identify what type of questions are asked for each topics. 
 
