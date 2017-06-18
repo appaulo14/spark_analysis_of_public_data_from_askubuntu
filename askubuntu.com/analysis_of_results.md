@@ -66,4 +66,6 @@ Tags were the most useful. The most common questions seemed to be about Ubuntu L
 
 Future research might try using a natural language parsing library such as [NLTK](http://www.nltk.org/) to better identify topics asked about and also better identify what type of questions are asked for each topics. 
 
+Maybe also looks at scores in the future. 
+
 Maybe focus on less than top 100. 
