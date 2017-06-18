@@ -15,7 +15,7 @@ I'm in no way affiliated with Ubuntu itself. This analysis is for demonstration 
 The data was obtained from the [Stack Exchange Data Dump on archive.org](https://archive.org/details/stackexchange), after which it was extracted out of its 7z achived and the XML files were uploaded to HDFS storage on Microsoft Azure. From there, the Spark code was developed in Python in an HD Insights cluster following this [Azure HD Insights/Spark guide](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-apache-spark-jupyter-spark-sql). The tags (Tags.xml), question titles(Posts.xml), and body of the questions(Posts.xml) were analyzed. 
 
 Spark Version: 2.0
-Exact command run: TBD
+Exact command run: spark-submit find_top_tags_for_askubuntu.com.py
 TODO: Upload/mention results files. 
 
 ## Results
@@ -25,8 +25,8 @@ TODO: Filter out a few more things.
 [(715309, u'ubuntu'), (713784, u'0'), (477814, u'1'), (415354, u'can'), (329433, u'install'), (304088, u'2'), (286386, u'sudo'), (279546, u'file'), (224475, u'3'), (220617, u'use'), (211330, u'04'), (205929, u'apt'), (197517, u'gt'), (192560, u'linux'), (189999, u'using'), (184321, u'all'), (179910, u'how'), (179026, u'boot'), (172296, u'windows'), (172064, u'installed'), (171396, u'10'), (167766, u'4'), (167122, u'system'), (149351, u'run'), (143196, u'command'), (140953, u'like'), (140175, u'error'), (136753, u'up'), (136714, u'etc'), (130072, u'after'), (129652, u'usr'), (128874, u'dev'), (128485, u'one'), (127692, u'files'), (127519, u'00'), (127499, u'lt'), (123257, u'problem'), (122438, u'm'), (122246, u'version'), (121726, u'some'), (118332, u'usb'), (118213, u'org'), (117208, u'need'), (114679, u'5'), (113204, u'root'), (112221, u'only'), (111619, u'12'), (111264, u'server'), (110969, u'8'), (109867, u'now'), (108946, u'desktop'), (108507, u'work'), (105769, u'package'), (104991, u'device'), (104714, u'new'), (104588, u'try'), (104410, u'set'), (104174, u'user'), (104016, u'help'), (102698, u'see'), (100452, u'kernel'), (100275, u'14'), (99981, u'd'), (99919, u'update'), (99853, u'home'), (99721, u'make'), (97950, u'packages'), (97840, u'7'), (97763, u'terminal'), (94853, u'alt'), (94706, u'other'), (94612, u'open'), (94242, u'partition'), (93830, u'running'), (93421, u'amp'), (90387, u'default'), (89638, u'following'), (89064, u'tried'), (88720, u'x'), (88216, u'image'), (87776, u'time'), (87748, u'name'), (87025, u'grub'), (86468, u'don'), (86136, u'type'), (85953, u'line'), (84885, u'same'), (84839, u'out'), (83676, u'way'), (83399, u'stack'), (82593, u'6'), (82455, u'found'), (82452, u'directory'), (82372, u'imgur'), (82153, u'src'), (81892, u'add'), (80967, u'bin'), (80715, u'gnome'), (80338, u'software'), (80023, u'screen')]
 
 TODO: Mention total tags 
-### Top 100 Tags
-Below are the top 100 tags out of 3,022 total tags.  
+### Top 25 Tags
+Below are the top 25 tags out of 3,022 total tags.  
 1. (u'14.04', 21148)  
 2. (u'12.04', 17412)  
 3. (u'boot', 13098)  
@@ -52,31 +52,6 @@ Below are the top 100 tags out of 3,022 total tags.
 23. (u'11.10', 5125)
 24. (u'software-installation', 5054)
 25. (u'sound', 4961)
-26. (u'kernel', 4229)
-27. (u'12.10', 4038)
-28. (u'mount', 4028)
-29. (u'updates', 4011)
-30. (u'permissions', 4009)
-31. (u'graphics', 3710)
-32. (u'scripts', 3676)
-33. (u'13.04', 3587)
-34. (u'windows', 3550)
-35. (u'virtualbox', 3430)
-36. (u'xubuntu', 3388)
-37. (u'keyboard', 3197)
-38. (u'ssh', 3193)
-39. (u'hard-drive', 3130)
-40. (u'lubuntu', 3018)
-41. (u'11.04', 2907)
-42. (u'apache2', 2887)
-43. (u'kubuntu', 2798)
-44. (u'uefi', 2788)
-45. (u'nautilus', 2768)
-46. (u'13.10', 2721)
-47. (u'python', 2719)
-48. (u'xorg', 2711)
-49. (u'firefox', 2676)
-50. (u'login', 2666)
 
 ### Top 100 words in Title
 TODO
