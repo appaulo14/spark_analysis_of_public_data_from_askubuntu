@@ -1,11 +1,11 @@
 # Finding the Most Common Topics on askubuntu.com
 ## Abstract
-This article focuses on analyzing the questions on askubuntu.com to find the most common topics asked about in order to better understand what areas of Ubuntu may need more attention for bug fixing and also what features might be good to add in future releases o Ubuntu. Analyzed public data on askubuntu HDInsights with Spark and found most common topics to identify what areas Ubuntu developers might benefit from focusing on. Tags were the most useful. Word counting the titles and body text was less useful. Future research might try using a natural language parsing library such as [NLTK](http://www.nltk.org/) to better identify topics asked about and also better identify what type of questions are asked for each topics. 
+This article focuses on analyzing the questions on askubuntu.com to find the most common topics asked about in order to better understand what areas of Ubuntu may need more attention for bug fixing and also what features might be good to add in future releases of Ubuntu. Analyzed public data on askubuntu HDInsights with Spark and found most common topics to identify what areas Ubuntu developers might benefit from focusing on. Tags were the most useful. Word counting the titles and body text was less useful. Future research might try using a natural language parsing library such as [NLTK](http://www.nltk.org/) to better identify topics asked about and also better identify what type of questions are asked for each topics. 
 
 ## Introduction
 Big Data consists of largs amounts of unstructured or semi-structed data that can be analyzed to derrive new insights that can not easily be found by manually search the data. For example, one could parse gigabytes of server log files to find common causes of errors or slowdowns on a cluster of servers. Another example would be analyzing tweets from Twitter to determine public sentiment about a product. A third example would be analyzing customer buying behavior to better deliver targeted advertising. 
 
-This article focuses on analyzing the questions on askubuntu.com to find the most common topics asked about in order to better understand what areas of Ubuntu may need more attention for bug fixing and also what features might be good to add in future releases o Ubuntu.
+This article focuses on analyzing the questions on askubuntu.com to find the most common topics asked about in order to better understand what areas of Ubuntu may need more attention for bug fixing and also what features might be good to add in future releases of Ubuntu.
 
 I'm in no way affiliated with Ubuntu itself. This analysis is for demonstration purposes only. 
 
