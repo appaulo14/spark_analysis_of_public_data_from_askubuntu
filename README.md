@@ -10,16 +10,18 @@ This article focuses on analyzing the questions on askubuntu.com to find the mos
 I'm in no way affiliated with Ubuntu itself. This analysis is for demonstration purposes only. 
 
 ## Methods
-The data was obtained from the [Stack Exchange Data Dump on archive.org](https://archive.org/details/stackexchange), after which it was extracted out of its 7z achived and the XML files were uploaded to HDFS storage on Microsoft Azure. From there, the Spark code was developed in Python in an HD Insights cluster following this [Azure HD Insights/Spark guide](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-apache-spark-jupyter-spark-sql). The tags (Tags.xml), question titles(Posts.xml), and body of the questions(Posts.xml) were analyzed. 
+The data was obtained from the [Stack Exchange Data Dump on archive.org](https://archive.org/details/stackexchange), after which it was extracted out of its 7z achived and the XML files were uploaded to HDFS storage on Microsoft Azure.
 
-Spark Version: 2.0
-Exact command run: spark-submit find_top_tags_for_askubuntu.com.py
-TODO: Upload/mention results files. 
+After the files were uploaded to Azure, two Spark 2.0 scripts were written and executed in Python (find_top_tags_for_askubuntu.com.py and find_top_words_for_askubunut.com.py) in an HD Insights cluster following this [Azure HD Insights/Spark guide](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-apache-spark-jupyter-spark-sql). 
 
-Used Jypter notebooks for prototyping. 
+These scripts can be run from a Spark 2.0 cluster using the following commands:    
+```spark-submit find_top_tags_for_askubuntu.com.py```   
+```spark-submit find_top_words_for_askubuntu.com.py```    
+
+The results from these scripts are saved in the results section of this repository. For find_top_words_for_askubuntu.com.py, only the top 1,000 results are saved due to size limitations. 
 
 ## Results
-### Top 25 Tags
+### Table 1: Top 25 Tags
 <table>
 <thead><tr><td><b>Rank</b></td><td><b>Tag</b></td><td><b>count</b></td></tr></thead>
 <tbody>
@@ -51,8 +53,38 @@ Used Jypter notebooks for prototyping.
 </tbody>
 </table>
 
+### Table 2: Top 25 Words in Title of Questions 
+|Rank|Word       |Count|
+|--- | ---       | --- |
+|1   |ubuntu     |71478|
+|2   |install    |19539|
+|3   |14.04	    |12902|
+|4   |windows    |12491|
+|5   |boot	    |11096|
+|6   |error	    |9763|
+|7   |16.04	    |9562|
+|8   |file	    |9426|
+|9  |cant	    |9348|
+|10  |12.04	    |9318|
+|11  |installing |8392|
+|12  |-	        |8332|
+|13  |working	|8046|
+|14  |using	    |7860|
+|15  |screen	    |7003|
+|16  |server	    |6999|
+|17  |files	    |6851|
+|18  |usb	    |6647|
+|19  |work	    |5557|
+|20  |installation |5438|
+|21  |system	      |5340|
+|22  |command	  |5055|
+|23  |update	      |5006|
+|24  |drive	      |4921|
+|25  |upgrade	  |4898|
 
-### Top 25 words in body of question, filtering out generic words such as prepositions and conjunctions
+
+### Table 3: Top 25 Words in Body of Question
+*Filtering out generic words such as prepositions and conjunctions
 <table>
 <thead><tr><td><b>Rank</b></td><td><b>word</b></td><td><b>count</b></td></tr></thead>
 <tbody>
@@ -80,23 +112,16 @@ Used Jypter notebooks for prototyping.
     <tr><td>22</td><td>error</td><td>102161</td></tr>
     <tr><td>23</td><td>1</td><td>101823</td></tr>
     <tr><td>24</td><td>only</td><td>100010</td></tr>
-    <tr><td>24</td><td>files</td><td>97827</td></tr>
+    <tr><td>25</td><td>files</td><td>97827</td></tr>
 </tbody>
 </table>
 
-### Top 100 words in Title
-TODO
-
 ## Discussion/Conclusion
-TODO: Add 1st place mentions, etc. 
-Tags were the most useful. The most common questions seemed to be about Ubuntu LTS releases (12.04, 14.04, 16.04), with all three recent LTS releases being in the top 6 tags. A lot of questions are related to booting (boot (3rd place),grub2, uefi). This might be due to the wide variety of hardware Ubuntu but can't say for sure. A lot about windows too (dual-boot,windows,windows-7,windows-8). Networking issues common (5th place for networking), 10th place for wireless, and XYZ place of network-manager. Drivers in 8th place. Graphis: ATI/NVidia, multiple monitors,  compiz. Sounds issues (sound, pulseaudio).  Various others here and there. 
+Tags were the most useful. The most common questions seemed to be about Ubuntu LTS releases (12.04, 14.04, 16.04), with all three recent LTS releases being in the top 6 tags. A lot of questions are related to booting (boot: 3rd place, dual-boot: 7th place, grub2: 13th place). This might be due to the wide variety of hardware Ubuntu but can't say for sure. Networking-related questions were common (networking: 5th place, wireless: 10th place). Many people seem to be interested in running Ubuntu as a server, judging by the server tag coming in at 11th place. Other notably high tags were related to drivers, graphics, installation, patitioning, and sound, again possibly due to the wide variety of hardware on which Ubuntu can run (drivers: 8th place, nvdia: 16th place, installation: 15th place, parititioning: 14th place, sound: 25th place). 
 
-~~This section should be a discussion of the results and the implications on the field, as well as other fields. The hypothesis should be answered and validated by the interpretation of the results.  This section should also discuss how the results relate to previous research mentioned in the literature review, any cautions about the findings, and potential for future research.~~
+Word counting did not provide much useful information compared to tag counting. A lot of the words were pronouns, prepositions, conjunctions, or other words that do not provide any meaningful information. I tried to filter such words out but it was difficult due to the large number of such words. 
+
+The information collected here may be useful what common problems Ubuntu users face and also what features they are most interested in.
 
 Future research might try using a natural language parsing library such as [NLTK](http://www.nltk.org/) to better identify topics asked about and also better identify what type of questions are asked for each topics. 
 
-TODO: How useful was this? 
-
-Maybe also looks at scores in the future. 
-
-Maybe focus on less than top 100. 
