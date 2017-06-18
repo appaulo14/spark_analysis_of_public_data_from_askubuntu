@@ -27,20 +27,63 @@ TODO: Filter out a few more things.
 TODO: Mention total tags 
 ### Top 100 Tags
 Below are the top 100 tags out of 3,022 total tags.  
-1. (21148, u'14.04')
-2. (17412, u'12.04')
-3. (13098, u'boot')
-4. (12294, u'command-line')
-5. (12101, u'networking')
-6. (11278, u'16.04')
-7. (10458, u'dual-boot'), (9723, u'drivers'), (9122, u'unity'), (9018, u'wireless'), (8852, u'server'), (8589, u'apt'), (7755, u'grub2'), (7474, u'partitioning'), (7221, u'installation'), (6498, u'nvidia'), (5818, u'gnome'), (5651, u'system-installation'), (5507, u'upgrade'), (5470, u'bash'), (5404, u'usb'), (5356, u'package-management'), (5125, u'11.10'), (5054, u'software-installation'), (4961, u'sound'), (4229, u'kernel'), (4038, u'12.10'), (4028, u'mount'), (4011, u'updates'), (4009, u'permissions'), (3710, u'graphics'), (3676, u'scripts'), (3587, u'13.04'), (3550, u'windows'), (3430, u'virtualbox'), (3388, u'xubuntu'), (3197, u'keyboard'), (3193, u'ssh'), (3130, u'hard-drive'), (3018, u'lubuntu'), (2907, u'11.04'), (2887, u'apache2'), (2798, u'kubuntu'), (2788, u'uefi'), (2768, u'nautilus'), (2721, u'13.10'), (2719, u'python'), (2711, u'xorg'), (2676, u'firefox'), (2666, u'login'), (2663, u'wine'), (2652, u'ubuntu-touch'), (2596, u'shortcut-keys'), (2541, u'software-recommendation'), (2404, u'multiple-monitors'), (2378, u'windows-7'), (2377, u'ati'), (2301, u'software-center'), (2268, u'java'), (2243, u'15.04'), (2126, u'mouse'), (2121, u'network-manager'), (2104, u'dpkg'), (2084, u'google-chrome'), (2056, u'printing'), (2010, u'launcher'), (1986, u'10.04'), (1985, u'internet'), (1979, u'video'), (1962, u'15.10'), (1916, u'10.10'), (1896, u'display'), (1858, u'suspend'), (1833, u'touchpad'), (1827, u'application-development'), (1826, u'bluetooth'), (1819, u'compiz'), (1791, u'64-bit'), (1765, u'sudo'), (1764, u'dell'), (1739, u'live-usb'), (1730, u'files'), (1716, u'filesystem'), (1716, u'password'), (1701, u'mysql'), (1694, u'windows-8'), (1666, u'uninstall'), (1647, u'php'), (1608, u'pulseaudio'), (1606, u'backup'), (1592, u'icons'), (1567, u'dependencies'), (1566, u'themes'), (1566, u'samba'), (1564, u'kde'), (1543, u'encryption'), (1543, u'security'), (1526, u'compiling'), (1513, u'power-management'), (1498, u'laptop')]
+1. (u'14.04', 21148)  
+2. (u'12.04', 17412)  
+3. (u'boot', 13098)  
+4. (u'command-line', 12294)  
+5. (u'networking', 12101)  
+6. (u'16.04', 11278)
+7. (u'dual-boot', 10458
+8. (u'drivers', 9723)
+9. (u'unity', 9122)
+10. (u'wireless', 9018)
+11. (u'server', 8852)
+12. (u'apt', 8589)
+13. (u'grub2', 7755)
+14. (u'partitioning', 7474)
+15. (u'installation', 7221)
+16. (u'nvidia', 6498)
+17. (u'gnome', 5818)
+18. (u'system-installation', 5651)
+19. (u'upgrade', 5507)
+20. (u'bash', 5470)
+21. (u'usb', 5404)
+22. (u'package-management', 5356)
+23. (u'11.10', 5125)
+24. (u'software-installation', 5054)
+25. (u'sound', 4961)
+26. (u'kernel', 4229)
+27. (u'12.10', 4038)
+28. (u'mount', 4028)
+29. (u'updates', 4011)
+30. (u'permissions', 4009)
+31. (u'graphics', 3710)
+32. (u'scripts', 3676)
+33. (u'13.04', 3587)
+34. (u'windows', 3550)
+35. (u'virtualbox', 3430)
+36. (u'xubuntu', 3388)
+37. (u'keyboard', 3197)
+38. (u'ssh', 3193)
+39. (u'hard-drive', 3130)
+40. (u'lubuntu', 3018)
+41. (u'11.04', 2907)
+42. (u'apache2', 2887)
+43. (u'kubuntu', 2798)
+44. (u'uefi', 2788)
+45. (u'nautilus', 2768)
+46. (u'13.10', 2721)
+47. (u'python', 2719)
+48. (u'xorg', 2711)
+49. (u'firefox', 2676)
+50. (u'login', 2666)
 
 ### Top 100 words in Title
 TODO
 
 ## Discussion/Conclusion
 TODO: Add 1st place mentions, etc. 
-Tags were the most useful. The most common questions seemed to be about Ubuntu LTS releases (12.04, 14.04, 16.04), with all three recent LTS releases being in the top 6 tags. A lot of questions are related to booting (boot (3rd place),grub2, uefi). This might be due to the wide variety of hardware Ubuntu but can't say for sure. A lot about windows too (dual-boot,windows,windows-7,windows-8). Networking issues common (5th place for networking), 10th place for wireless, and XYZ place of network-manager. Drivers in 8th place. Graphis: ATI/NVidia, multiple monitors,  compiz. Sounds issues (sound, pulseaudio).  
+Tags were the most useful. The most common questions seemed to be about Ubuntu LTS releases (12.04, 14.04, 16.04), with all three recent LTS releases being in the top 6 tags. A lot of questions are related to booting (boot (3rd place),grub2, uefi). This might be due to the wide variety of hardware Ubuntu but can't say for sure. A lot about windows too (dual-boot,windows,windows-7,windows-8). Networking issues common (5th place for networking), 10th place for wireless, and XYZ place of network-manager. Drivers in 8th place. Graphis: ATI/NVidia, multiple monitors,  compiz. Sounds issues (sound, pulseaudio).  Various others here and there. 
 
 ~~This section should be a discussion of the results and the implications on the field, as well as other fields. The hypothesis should be answered and validated by the interpretation of the results.  This section should also discuss how the results relate to previous research mentioned in the literature review, any cautions about the findings, and potential for future research.~~
 
