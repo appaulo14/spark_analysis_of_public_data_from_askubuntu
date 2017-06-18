@@ -18,6 +18,8 @@ Spark Version: 2.0
 Exact command run: spark-submit find_top_tags_for_askubuntu.com.py
 TODO: Upload/mention results files. 
 
+Used Jypter notebooks for prototyping. 
+
 ## Results
 
 ### Top 100 words in body of question, filtering out generic words such as prepositions and conjunctions
